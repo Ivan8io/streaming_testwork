@@ -31,7 +31,7 @@ class OLDpayController extends Controller
 
     public function process(Request $request) 
     {
-        $payment_id = $request->payment_id;
+        $payment_id = $request->input('payment_id');
 
         $check = Http::withHeaders([
             'X-Secret-Key' => $_ENV['SECRET_OLD'],
